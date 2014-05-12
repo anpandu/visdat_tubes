@@ -25,4 +25,5 @@ function drawChart(_reg) {
 	var chart2 = new google.visualization.ColumnChart(document.getElementById('chart_div2'));
 	chart.draw(gdata, options);
 	chart2.draw(gdata2, options2);
+	document.getElementById('reg_name').innerHTML = _reg.toUpperCase();
 }

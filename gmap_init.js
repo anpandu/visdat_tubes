@@ -14,7 +14,7 @@ function initialize() {
 	var gmap = new google.maps.Map(document.getElementById("gmapcanvas"), gmapOptions);	
 
 	var regs = Object.keys(MASTER_DATA);
-	for (var i = 0; i < 2; i++) {
+	for (var i = 0; i < regs.length; i++) {
 		var marker = new google.maps.Marker({
 		    position: new google.maps.LatLng(-25.363882+i*10,131.044922+i*10),
 		    title: regs[i],
