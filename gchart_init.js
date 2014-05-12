@@ -4,13 +4,17 @@ var options = {
 	title: 'School Enrollment',
 	hAxis: {title: 'tahun', titleTextStyle: {color: 'gray'}},
 	colors: ['#ffcc00', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
-	backgroundColor: '#B3D1FF',
+	backgroundColor: 'transparent',
+	legend: {position: 'none'},
+	titlePosition: 'in'
 };
 var options2 = {
 	title: 'Infant Death',
 	hAxis: {title: 'tahun', titleTextStyle: {color: 'gray'}},
 	colors: ['#663333', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
-	backgroundColor: '#B3D1FF',
+	backgroundColor: 'transparent', //#B3D1FF
+	legend: {position: 'none'},
+	titlePosition: 'out'
 };
 
 google.setOnLoadCallback(begin);
