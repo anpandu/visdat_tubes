@@ -2,14 +2,14 @@
 google.load("visualization", "1", {packages:["corechart"]});
 var options = {
 	title: 'School Enrollment',
-	hAxis: {title: 'tahun', titleTextStyle: {color: 'black'}},
-	colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
+	hAxis: {title: 'tahun', titleTextStyle: {color: 'gray'}},
+	colors: ['#ffcc00', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
 	backgroundColor: '#B3D1FF',
 };
 var options2 = {
 	title: 'Infant Death',
-	hAxis: {title: 'tahun', titleTextStyle: {color: 'black'}},
-	colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
+	hAxis: {title: 'tahun', titleTextStyle: {color: 'gray'}},
+	colors: ['#663333', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
 	backgroundColor: '#B3D1FF',
 };
 
