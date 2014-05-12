@@ -16,7 +16,7 @@ function initialize() {
 	var regs = Object.keys(MASTER_DATA);
 	for (var i = 0; i < regs.length; i++) {
 		var marker = new google.maps.Marker({
-		    position: new google.maps.LatLng(-25.363882+i*10,131.044922+i*10),
+		    position: new google.maps.LatLng(MASTER_DATA[regs[i]]["lat"], MASTER_DATA[regs[i]]["lon"]),
 		    title: regs[i],
     		animation: google.maps.Animation.DROP,
 		});
