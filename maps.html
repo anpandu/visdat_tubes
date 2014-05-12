@@ -2,9 +2,16 @@
 
 	<head>
 
-
+		<!-- biar ganteng -->
     	<link rel="stylesheet" href="pure.css">
     	<link rel="stylesheet" href="master.css">
+
+    	<!-- database & chart -->
+	    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	    <script type="text/javascript" src="database.js"></script>
+	    <script type="text/javascript" src="gchart_init.js"></script>
+
+    	<!-- gmaps -->
 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfbwR0vsEaiBGN-KxQQjerTAx8hytqhnU&sensor=true"></script>
 		<script type="text/javascript" src="gmap_init.js"></script>
 	</head>
@@ -13,7 +20,21 @@
 
 		<div class="pure-g-r">
 
-		    <div class="pure-u-1-3"></div>
+		    <div class="pure-u-1-3">
+		    	<center>
+					<select name="select_region" onchange="drawChart(this.value);">
+				    	<script type="text/javascript">
+				    		var regs = Object.keys(MASTER_DATA);
+				    		for (var i = 0; i < regs.length; i++) {
+								document.write("<option value='"+regs[i]+"'>"+regs[i]+"</option>");
+				    		};
+				    	</script>
+					</select>
+		    	</center>
+				<div id="chart_div" style="width: 100%; height: 300px;"></div>
+				<div id="chart_div2" style="width: 100%; height: 300px;"></div>
+		    </div>
+
 		    <div class="pure-u-2-3" id="gmapcanvas"></div>
 
 		</div>
