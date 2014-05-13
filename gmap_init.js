@@ -9,26 +9,27 @@ function initialize() {
 		zoom: startzoom,
 		disableDefaultUI: true,
 		scaleControl: false,
-		scrollwheel: false,
+		// scrollwheel: false,
 	};
-	var gmap = new google.maps.Map(document.getElementById("gmapcanvas"), gmapOptions);	
-
+	var gmap = new google.maps.Map(document.getElementById("gmapcanvas"), gmapOptions);
 	var regs = Object.keys(MASTER_DATA);
 	for (var i = 0; i < regs.length; i++) {
 		var marker = new google.maps.Marker({
 		    position: new google.maps.LatLng(MASTER_DATA[regs[i]]["lat"], MASTER_DATA[regs[i]]["lon"]),
 		    title: regs[i],
-    		animation: google.maps.Animation.DROP,
+    		animation: google.maps.Animation.DROP
 		});
 		marker.setMap(gmap);
 		google.maps.event.addListener(marker, 'click', (function(marker, i) {
 			return function() {
-				drawChart(marker.title);
+				drawChart(marker, gmap);
 				marker.setAnimation(google.maps.Animation.BOUNCE);
-				gmap.panTo(new google.maps.LatLng(marker.getPosition().lat() ,marker.getPosition().lng()));
 				setTimeout(function(){marker.setAnimation(null)}, 3000);
 			}
 		})(marker, i));
+		if (regs[i]=="Indonesia") {
+			drawChart(marker, gmap);
+		}
 	};
 }		
 
