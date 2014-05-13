@@ -23,7 +23,7 @@ function initialize() {
 		marker.setMap(gmap);
 		google.maps.event.addListener(marker, 'click', (function(marker, i) {
 			return function() {
-				drawChart(marker.title.toLowerCase());
+				drawChart(marker.title);
 				marker.setAnimation(google.maps.Animation.BOUNCE);
 				gmap.panTo(new google.maps.LatLng(marker.getPosition().lat() ,marker.getPosition().lng()));
 				setTimeout(function(){marker.setAnimation(null)}, 3000);

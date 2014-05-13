@@ -19,10 +19,10 @@ var options2 = {
 
 google.setOnLoadCallback(begin);
 function begin () {
-	drawChart('indonesia');
+	drawChart('Indonesia');
 }
 function drawChart(_reg) {
-	var reg = (_reg!="") ? _reg : "indonesia";
+	var reg = (_reg!="") ? _reg : "Indonesia";
 	var gdata = google.visualization.arrayToDataTable(MASTER_DATA[reg]["se"]);
 	var gdata2 = google.visualization.arrayToDataTable(MASTER_DATA[reg]["id"]);
 	var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
